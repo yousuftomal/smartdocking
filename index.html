@@ -23,7 +23,7 @@
 
     <div class="form-area">
       <label for="pin"><strong>Enter PIN:</strong></label><br>
-      <input type="password" id="pin" name="pin" maxlength="5" minlength="5" placeholder="•••••" /><br><br>
+      <input type="password" id="pin" name="pin" maxlength="5" placeholder="•••••" /><br><br>
     </div>
 
     <div class="button-area">
@@ -38,6 +38,8 @@
       const pin = document.getElementById("pin").value;
       if (pin.length === 0) {
         alert("Please enter your PIN.");
+      } else if (pin.length < 5) {
+        alert("PIN must be 5 digits long.");
       } else {
         alert("This is a demo. Real payment must be done via bKash app.");
       }
