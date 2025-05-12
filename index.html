@@ -21,11 +21,27 @@
       <p><strong>Counter:</strong> #001</p>
     </div>
 
+    <div class="form-area">
+      <label for="pin"><strong>Enter PIN:</strong></label><br>
+      <input type="password" id="pin" name="pin" maxlength="6" placeholder="••••••" /><br><br>
+    </div>
+
     <div class="button-area">
-      <button onclick="alert('This is a demo. Real payment must be done via bKash app.')">Proceed</button>
+      <button onclick="handleSubmit()">Proceed</button>
     </div>
 
     <p class="note">This is a demonstration page for showcasing payment simulation using bKash.</p>
   </div>
+
+  <script>
+    function handleSubmit() {
+      const pin = document.getElementById("pin").value;
+      if (pin.length === 0) {
+        alert("Please enter your PIN.");
+      } else {
+        alert("This is a demo. Real payment must be done via bKash app.");
+      }
+    }
+  </script>
 </body>
 </html>
